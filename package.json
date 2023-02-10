@@ -1,0 +1,26 @@
+{
+  "name": "nohio",
+  "version": "0.1.0",
+  "description": "",
+  "source": "src/manifest.json",
+  "scripts": {
+    "prestart": "rimraf dist",
+    "start": "parcel watch --host localhost",
+    "prebuild": "rimraf dist",
+    "build": "parcel build"
+  },
+  "author": "Pronoun",
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "@parcel/config-webextension": "^2.8.3",
+    "@parcel/core": "^2.8.3",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "parcel": "^2.8.3",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.5"
+  }
+}
