@@ -7,6 +7,7 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
+  "permissions": ["storage"],
   "background": {
     "service_worker": "background.ts",
     "type": "module"

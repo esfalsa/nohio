@@ -11,7 +11,7 @@ const walker = document.createTreeWalker(
 let replaced = 0;
 
 while (walker.nextNode()) {
-  walker.currentNode.textContent = walker.currentNode.textContent!.replace(
+  walker.currentNode.textContent &&= walker.currentNode.textContent.replace(
     /ohio/gi,
     () => {
       replaced++;
@@ -26,3 +26,7 @@ if (replaced > 0) {
     value: replaced.toString(),
   } satisfies ExtensionMessage);
 }
+
+browser.storage.local.get("blocked").then(({ blocked }) => {
+  browser.storage.local.set({ blocked: (blocked || 0) + replaced });
+});
