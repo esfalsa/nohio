@@ -1,7 +1,7 @@
 import browser from "webextension-polyfill";
 import { type ExtensionMessage } from "./types";
 
-const ohioRegex = /ohio/gi;
+const ohioRegex = /(o|0)hi(o|0)/gi;
 
 function censor(node: Node) {
   const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, (node) =>
