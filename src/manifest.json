@@ -19,5 +19,7 @@
       "js": ["content.ts"]
     }
   ],
-  "action": {}
+  "action": {
+    "default_popup": "popup/index.html"
+  }
 }
